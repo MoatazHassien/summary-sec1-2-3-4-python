@@ -5,6 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Summary sec 1,2,3,4 python   </title>
 <style>
+  @media print {
+    /* 1. إجبار الألوان والخلفيات تظهر زي ما هي */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* 2. إلغاء الهوامش الافتراضية للمتصفح (اللي بتكتب التاريخ واسم الصفحة) */
+    @page {
+        margin: 0;
+        size: auto;
+    }
+
+    /* 3. تظبيط جسم الصفحة عشان مفيش حاجة تتقص */
+    body {
+        margin: 1cm; /* أو المسافة اللي تحبها */
+        padding: 0;
+    }
+
+    /* 4. إخفاء أي أزرار أو عناصر مش محتاجها في الورق */
+    .no-print {
+        display: none !important;
+    }
+}
+
   @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Fira+Code:wght@400;500&display=swap');
 
   :root {
