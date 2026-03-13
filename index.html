@@ -5,26 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Summary sec 1,2,3,4 python   </title>
 <style>
-  @media print {
-    /* 1. إجبار الألوان والخلفيات تظهر زي ما هي */
+@media print {
+    /* إجبار الألوان والخلفية الغامقة */
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
-
-    /* 2. إلغاء الهوامش الافتراضية للمتصفح (اللي بتكتب التاريخ واسم الصفحة) */
+    
     @page {
         margin: 0;
         size: auto;
     }
 
-    /* 3. تظبيط جسم الصفحة عشان مفيش حاجة تتقص */
     body {
-        margin: 1cm; /* أو المسافة اللي تحبها */
+        background-color: #0a0e1a !important; /* نفس لون خلفية الملف */
+        margin: 0;
         padding: 0;
     }
 
-    /* 4. إخفاء أي أزرار أو عناصر مش محتاجها في الورق */
+    /* إخفاء أي عناصر مش محتاجها تظهر في الورق */
     .no-print {
         display: none !important;
     }
