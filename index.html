@@ -6,6 +6,59 @@
 <title>Summary sec 1,2,3,4 python   </title>
 <style>
 @media print {
+    
+    @page {
+        size: A4;
+        margin: 0; /* هنتحكم في الهوامش من الـ body أدق */
+    }
+
+    /* إلغاء أي تأثيرات تعيق تقسيم الصفحات */
+    html, body {
+        background-color: #0a0e1a !important;
+        width: 210mm;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* ضبط الحاوية الرئيسية للمحتوى */
+    .container, main {
+        width: 100% !important;
+        padding: 15mm !important; /* هامش داخلي للورقة */
+        display: block !important; /* تحويل الفليكس لبلوك للطباعة */
+    }
+
+    /* منع تقسيم العناصر (مثل الكروت أو كود السيري) بين صفحتين */
+    .section, .concept-card, .code-block, .explain, .analogy, .output-block {
+        display: block !important;
+        width: 100% !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 20px !important;
+        position: relative !important;
+        float: none !important; /* لضمان عدم تداخل العناصر */
+    }
+
+    /* تصغير حجم الخطوط عشان تتناسب مع ورق الـ A4 */
+    h1 { font-size: 24pt !important; margin-top: 0 !important; }
+    h2 { font-size: 18pt !important; }
+    p, div, li { font-size: 12pt !important; line-height: 1.6 !important; }
+
+    /* إخفاء الصفحات الفاضية الناتجة عن الـ vh */
+    .toc-page, .cover {
+        height: auto !important;
+        min-height: auto !important;
+        margin-bottom: 50px !important;
+        page-break-after: always; /* إجبار الغلاف يكون في صفحة لوحده */
+    }
+
+
     /* إجبار الألوان والخلفية الغامقة */
     * {
         -webkit-print-color-adjust: exact !important;
